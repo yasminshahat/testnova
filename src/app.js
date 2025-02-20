@@ -5,7 +5,12 @@ const path = require('path');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:3000', // Your Vite frontend URL
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // Routes
