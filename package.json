@@ -1,0 +1,24 @@
+{
+  "name": "testnova",
+  "version": "1.0.0",
+  "description": "This is the backend service for the Online Examination System. It provides APIs for managing online examinations, including question banks, randomized exam generation, and performance analytics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasminshahat/testnova.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasminshahat/testnova/issues"
+  },
+  "homepage": "https://github.com/yasminshahat/testnova#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
