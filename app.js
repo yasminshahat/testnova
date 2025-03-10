@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+app.use();
+
 app.use('/api',(req, res, next) => {
     res.send('<h1>API</h1>');
 });
