@@ -1,17 +1,16 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+
+const authRoutes = require("./routes/auth");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(authRoutes);
 
-app.use('/api',(req, res, next) => {
-    res.send('<<h1>API</h1>>');
+app.get("/", (req, res) => res.send("Hello, world!"));
+
+
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`My first Express app - listening on port ${PORT}!`);
 });
 
-app.use('/',(req, res, next) => {
-    console.log(req.body);
-    res.send('<h1>hello from express</h1>');
-});
-
-app.listen(4000);
