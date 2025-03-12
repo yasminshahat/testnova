@@ -7,6 +7,8 @@ const examsRoutes = require("./src/routes/exams.routes");
 const resultsRoutes = require("./src/routes/results.routes");
 const exp = require("constants");
 
+const errorController = require('./src/controllers/error.Controller');
+
 const app = express();
 
 //Serve static files
@@ -22,9 +24,7 @@ app.use((req, res, next) => {
 });
 
 //404 Page
-app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "../public"));
-});
+app.use(errorController.get404);
 
 const PORT = 5000;
 app.listen(PORT, () => {
