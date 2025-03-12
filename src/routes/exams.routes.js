@@ -1,8 +1,10 @@
 const express = require("express");
-const router = express.Router();
-const rootDir = require('../util/path');
 
-router.get("/create", (req, res, next) => {
+const rootDir = require("../util/path");
+
+const router = express.Router();
+
+router.post("/create", (req, res, next) => {
   res.send("<h1>hello from exams</h1>");
 });
 
