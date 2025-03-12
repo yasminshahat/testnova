@@ -13,7 +13,7 @@ app.use(examsRoutes);
 app.use(resultsRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).send("<h1>Page Not Found</h1>")
+    res.status(404).sendFile(path.join(__dirname, '../public'))
 });
 
 const PORT = 5000;
